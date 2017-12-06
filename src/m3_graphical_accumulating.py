@@ -69,7 +69,7 @@ def run_test_draw_parallel_lines():
 
 
 def draw_parallel_lines(n, point, length, window):
-    line = rg.Line()
+
     """
     What comes in: The four arguments are:
       -- A positive integer n.
@@ -135,6 +135,8 @@ def run_test_draw_lines():
 
 
 def draw_lines(n, point, window):
+
+
     """
     What comes in: The three arguments are:
       -- A integer n that is at least 2.
