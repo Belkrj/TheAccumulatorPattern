@@ -147,7 +147,9 @@ def run_test_draw_circles_from_rectangle():
 
 
 def draw_circles_from_rectangle(m, n, rectangle, window):
-
+    rectangle.attach_to(window)
+    for k in range(m):
+        circle = rg.Circle(rectangle.corner_1)
 
     """
     What comes in:  Four arguments:
