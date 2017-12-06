@@ -73,7 +73,14 @@ def run_test_draw_squares_from_circle():
 
 
 def draw_squares_from_circle(n, circle, window):
-
+    circle.attach_to(window)
+    window.render()
+    for k in range(n):
+        l = rg.Point((circle.center.x + (k * circle.radius)), circle.center.y + (k * circle.radius))
+        square = rg.Square(l, 2 * circle.radius)
+        square.attach_to(window)
+        window.render()
+    return square
 
 
     """
@@ -101,7 +108,7 @@ def draw_squares_from_circle(n, circle, window):
       :type window: rg.RoseWindow
     """
     # ------------------------------------------------------------------
-    # TODO: 2. Implement and test this function.
+    # DONE: 2. Implement and test this function.
     #          Tests have been written for you (above).
     #
     # CONSIDER using the ACCUMULATOR IN GRAPHICS pattern,
@@ -140,6 +147,8 @@ def run_test_draw_circles_from_rectangle():
 
 
 def draw_circles_from_rectangle(m, n, rectangle, window):
+
+
     """
     What comes in:  Four arguments:
       -- Positive integers m and n.
